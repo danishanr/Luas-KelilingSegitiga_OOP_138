@@ -58,7 +58,7 @@ class Segitiga{
             }
             else if (a % 2 != 0 || b % 2 != 0 || c % 2 != 0)
             {
-                cout << "Angka tersebut adalah bilangan ganjil. Keliling tidak dapat dihitung." << endl;
+                cout << "Angka tersebut adalah bilangan ganjil, keliling tidak dapat dihitung." << endl;
             }
             else
             {
@@ -87,8 +87,7 @@ int main(){
     Segitiga shape;
     int pil;
 
-    do
-    {
+    do{
         cout << "========== Menu ==========" << endl;
         cout << "1. Hitung Luas Segitiga\n2. Hitung Keliling Segitiga\n3. Keluar" << endl;
         cout << "Masukkan pilihan : ";
