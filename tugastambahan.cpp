@@ -89,3 +89,8 @@ class Segitiga{
         }   
     }
 };
+
+int main(){
+    Segitiga shape;
+
+}
