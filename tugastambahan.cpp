@@ -5,21 +5,17 @@ class Segitiga{
     private :
     int alas, tinggi, a, b, c;
 
-    float hitungLuas()
-    {
+    float hitungLuas(){
         return 0.5 * alas * tinggi;
     }
 
-    float hitungKeliling()
-    {
+    float hitungKeliling(){
         return (a + b + c);
     }
         
     public :
-    void inputDataLuas()
-    {
-        do
-        {
+    void inputDataLuas(){
+        do{
             cout << "Masukkan alas segitiga (1 - 50) : ";
             cin >> alas;
 
@@ -45,10 +41,8 @@ class Segitiga{
         cout << endl;  
     }
 
-    void inputDataKeliling()
-    {
-        do
-        {
+    void inputDataKeliling(){
+        do{
             cout << "Masukkan sisi a (1 - 50) : ";
             cin >> a;
 
@@ -77,8 +71,7 @@ class Segitiga{
 
     }
 
-    void outputData(int pilihan)
-    {
+    void outputData(int pilihan){
         if (pilihan == 1)
         {
             cout << "Luas segitiga : " << hitungLuas() << endl;
@@ -92,5 +85,31 @@ class Segitiga{
 
 int main(){
     Segitiga shape;
+    int pil;
 
+    do
+    {
+        cout << "========== Menu ==========" << endl;
+        cout << "1. Hitung Luas Segitiga\n2. Hitung Keliling Segitiga\n3. Keluar" << endl;
+        cout << "Masukkan pilihan : ";
+        cin >> pil;
+
+    switch (pil){
+        case 1:
+            shape.inputDataLuas();
+            shape.outputData(1);
+            break;
+        case 2:
+            shape.inputDataKeliling();
+            shape.outputData(2);
+            break;
+        case 3: 
+            cout << "Program selesai" << endl;
+            return 0;
+        default:
+            cout << "||| Silahkan Pilih antara 1 - 3 |||" << endl;
+        }
+        cout << endl;
+        
+    } while (true);
 }
